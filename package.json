@@ -1,12 +1,12 @@
 {
-  "name": "goit-js-hw-08",
+  "name": "goit-js-hw-09",
   "version": "1.1.0",
   "description": "",
   "main": "index.html",
   "homepage": "",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-08/src/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09/src/"
   },
   "repository": {
     "type": "git",
