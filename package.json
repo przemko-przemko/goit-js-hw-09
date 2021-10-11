@@ -6,7 +6,7 @@
   "homepage": "",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-09/src"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09/src/"
   },
   "repository": {
     "type": "git",
