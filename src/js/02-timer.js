@@ -60,6 +60,7 @@ const addZeroValue = val => {
   return val.toString().padStart(2, '0');
 };
 const countdown = () => {
+  Notiflix.Notify.success('Start Countdown! :)')
   idTime = setInterval(() => {
     let timeMiliSecond = selectData.getTime() - new Date().getTime();
     btnStart.disabled = true;
@@ -68,6 +69,7 @@ const countdown = () => {
     hours.innerText = addZeroValue(convertMs(timeMiliSecond).hours);
     minutes.innerText = addZeroValue(convertMs(timeMiliSecond).minutes);
     seconds.innerText = addZeroValue(convertMs(timeMiliSecond).seconds);
+    
     if (
       convertMs(timeMiliSecond).days === 0 &&
       convertMs(timeMiliSecond).hours === 0 &&
@@ -78,7 +80,11 @@ const countdown = () => {
     }
   }, 1000);
 };
-const fail = () => Notiflix.Notify.failure('Button in progress');
+const fail = () => {
+  clearInterval(idTime);
+  btnStart.disabled = false
+Notiflix.Notify.failure('Stop Countdown! :)');
+}
 btnStart.addEventListener('click', countdown);
 btnStop.addEventListener('click', fail);
 
